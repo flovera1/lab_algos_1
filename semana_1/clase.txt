@@ -1,0 +1,244 @@
+Info:
+nombre: Fernando Lovera
+email: flovera@usb.ve / flovera1@gmail.com
+tfono: +32 468 16 09 76
+
+Lab 1:
+
+- instalacion de Python, version 3
+- instalando un editor.
+	- Sublime
+	- Vim
+	- ... notepad ++ 
+	- gedit
+	- ...
+- Comandos en linux
+- Python:
+	- Expresiones: (i.e. expresiones aritmeticas, expresiones booleanas, predicados, ... etc)
+	- Variables y asignacion
+	- Precondicion y Postcondicion
+
+{P} Q {R} ---> Tripleta de hoor
+P y R son predicados logicos.
+
+- Instalacion de Python en Linux 
+
+Ubuntu:
+$ sudo apt-get install python3
+Arch Linux:
+$ sudo pacman -S python
+Gentoo:
+$ sudo emerge -sv python 
+
+
+
+Instalar el editor.
+
+instalar Geany.
+
+ubuntu:
+sudo apt-get install geany
+
+
+Arch linux:
+sudo pacman -S geany
+
+Gentoo:
+sudo emerge -av dev-util/geany
+
+MacOS X:
+sudo port install geany
+
+VS, VS Code, Sublime, Notepad++, ...
+
+
+
+
+
+Comandos mas usados en Linux - Ubuntu:
+
+1) pwd ---> dicta la ruta del directorio actual.
+2) ls  ---> lista los directorios.
+3) cd [path] ---> cambiar de directorio. 
+4) mkdir [nombre] ---> crear una carpeta.
+5) rm ---> comando que permite eliminar archivos o carpetas dependiendo del directorio en donde esten.
+
+6) otros: clear (ctrl + l), chmod, ... etc, hay muchos comandos en Linux!,
+ familiriazate con los mas comunes.
+
+comando para ejecutar programas en Python:
+
+$ python <nombre_archivo.py>
+
+Ejercicios: 
+- Crear un directorio con su nombre para sus programas
+- Cambiarse a ese directorio
+- Cree el archivo: hola_mundo.py con la siguiente instruccion:
+print('Hola mundo')
+- Ejecute el programa.
+
+
+
+
+Expresiones:
+Python es un leng de programacion que se ejecuta linea a linea. 
+Operaciones aritmeticas: a + b, a / b, a // b, a**b, a%b, a*b, -a
+Operaciones booleanas: not a, a or b, a and b
+Operaciones comparativas: a > b, a >= b, a <= b, a != b a < b
+
+Asignacion:
+
+a = True
+w = 42
+h = 57
+w*h
+
+Valores reales y complejos
+
+Si hay un valor flotante (valor real) en una operacion, entonces todos 
+las operaciones se convierten en flotantes.
+
+Se agrega la letra j para el caso de los complejos al final del numero. Los complejos con parte real distinta de 0 se crean con una operacion:
+complex(real, imaginaria)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Valores booleanos
+
+
+True y False
+
+x or y
+x and y
+not x
+not y
+
+==
+
+a = True
+b = False
+
+a != b == True
+
+Cuantificadores: acotados y predicadors. 
+>>> range(10, 20)
+[10, 11, 12, ..., 19]
+
+Funciones: 
+def nombre_funcion(x): return x%2
+
+Precondiciones y postcondiciones
+usar la funcion assert para verificar si una condicion se satisface o no.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Parte 1: Traducción de variables y expresiones de GCL a Python.
+Escriba en el interpretador de Python definiciones equivalente para las siguientes variables de GCL.
+Como en Python no se colocan los tipo de las variables escriba un comentario al lado de cada una
+que indique el tipo de la misma.
+1. var x := 10:int
+2. var edad := 32:int
+3. var pi:= 3.14159: float
+4. var altura:= 2.1: float
+5. var peso:= 76.8: float
+6. var y:= 20 + 3i: complejo
+7. var z:= 1+i: complejo
+Usando las variables previamente definidas, traduzca a Python las siguientes expresiones
+1. x mod 3
+2. 525 div edad
+3. el valor absoluto de -pi
+4. la norma de y dividido entre el peso
+5. altura por pi
+Parte 2: Traduzca a Python las siguientes expresiones en GCL. Luego ejecútelas en el interpretador
+1. ( sum x : 1 <= x < 100 /\ x mod 7 == 0 : x )
+2. ( max x : 5 <= x < 40 /\ x*x mod 7== 0 : x )
+3. ( min x : 5 <= x < 40 /\ x*x == 128 : x )
+4. ( exists x: 0 <= x <= b : b=2*x )
+5. Esperfecto(n) == (exists x: 0 <= x <= n : n=x*x )
+Parte 3: Para las siguientes secuencias de instrucciones en Python complete las aserciones o
+instrucciones indicadas
+1.
+a,b = 32,43
+# Escribir Precondicion
+b , a = a , b
+# Postcondicion
+assert( b == 32 and a == 43)
+
+2.
+a,b = 100,5
+# Precondicion
+assert( a == 100 and b == 5 )
+# Agregar una asignación en lugar de este comentario
+# Postcondicion
+assert( c == a/b )
+
+
+3.
+a,b = 43, 35
+# Precondicion
+assert( a == 43 and b == 35 )
+# Calculos
+c = a % b
+c = c*10
+a = c
+# Escribir Postcondicion
+4.
+a,b,c = 80,180,0
+# Precondicion
+assert( a == 80 and b == 180 )
+# Agregar en este punto una secuencia
+# tal que cumpla con la postcondición dada.
+# sugerencia: Utilizar la función módulo! (%)
+#Postcondicion
+assert( a == 80 and b == 180 and c == 2000 )
+Parte 4: Abra el archivo ejemplo1.py en un editor de texto. Cargue el archivo escribiendo el
+siguiente comando en el interpretador de Python:
+>>> from ejemplo1 import *
+Usando el mismo modelo de dicho archivo (comentarios, aserciones y estructura) escriba
+programas en Python que resuelvan los siguientes problemas y guárdelos con los nombres
+sugeridos:
+1. Lab1Ejercicio1.py: Calcular el área de un circunferencia
+2. Lab1Ejercicio2.py: Dados tres valores enteros a,b,c que cumplen a>=b>=c, intercambie los
+valores de manera que cumplan a<=b<=c
+3. Lab1Ejercicio3.py: Dice si b es par
+
+
