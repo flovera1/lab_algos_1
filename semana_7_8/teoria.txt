@@ -1,0 +1,69 @@
+LECTURA DE ARCHIVOS
+
+lectura y escritira de archivos
+
+En Python se pueden manejar archivos de texto, su contenido se interpreta como
+caracteres se leen y escriben string desde y hacia el archivo.
+
+- OPEN
+
+open() devuelve un objeto tipo archivo. 
+open(nombre_del_archivo, modo)
+
+- nombre_del_archivo: es un string con la direccion o nombre del archivo.
+
+- modo: es un caracter. 'r', 'w', 'a', 'r+' 
+
+open('nombre', 'w')
+
+
+
+- REMOVE
+
+
+elimina un archivo. os.remove(string) string -> la direccion del archivo. 
+import os
+
+open -> se crea un objeto de tipo archivo al cual denominamos 'f'
+f.read(tamano) leer la cantidad de datos indicada en el tamano. 
+
+
+f.readlin() -> leer una linea del archivo. 
+
+for line in f:
+	print(line, end='')
+
+list(f) o f.readlines()
+
+input.txt
+-----> 	Linea 1
+	Linea 2
+
+f = open("input.txt")
+lineas = f.readlines()
+
+['Linea 1\n', 'Linea 2\n']
+
+
+
+f.write(frase)
+
+f.write('Hola Fernando')
+
+>>> valor = [2,3,4]
+>>> s = str(valor)
+>>> f.write(s)
+9
+
+f.close()
+
+f.closed -> devuelve un booleano
+
+>>> with open('archivo', 'r') as f:
+	read_data = f.read()
+>>>f.closed
+
+
+
+
+

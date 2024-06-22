@@ -1,0 +1,5 @@
+Para cada uno de los ejercicios del laboratorio 6, escriba un
+documento en donde coloque las pruebas realizadas. En los escenarios de pruebas debe haber
+al menos: entradas correctas, entradas incorrectas y salida esperada. Cada documento
+guárdelo con los nombres: “PruebaEjercicio1Lab6.txt”, “PruebaEjercicio2Lab6.txt” y
+“PruebaEjercicio3Lab6.txt”
