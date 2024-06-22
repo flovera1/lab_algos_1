@@ -1,0 +1,64 @@
+PASE DEA ARGUMENTOS EN PYTHON DESDE FUERA DEL INTERPRETADOR:
+
+1) Utilizando el input() -> string 
+	Puedes mapear/transformar como int()
+		
+	var_1 = input("introduzca parametro 1")
+	var_n = ...
+2) Argumentos: sys.argv[1]
+	
+import sys
+numero = int(sys.argv[1])
+
+ITERACIONES
+
+En GCL las iteraciones son:
+
+do   B0 -> S0
+|    B1 -> S1
+|    B2 -> S3
+od
+
+do y od son palabras reservadas, Bi son expresiones booleanas. Si son instrucciones.
+
+skip -> pass
+
+A continuacion un ejemplo:
+Se muestra la siguiente iteracion de GLC en Python:
+
+i, suma :=0, 0;
+{N > 0 ^ 0 <= i <= N}
+do i <= N ->
+	if(i mod 2 = 0) ->
+		suma = suma + 1
+	[] (i mod 2 != 0) ->
+		skip
+	fi;
+	i := i + 1
+od
+{N > 0 ^ i > N}
+
+==============> traducido a codigo python como:
+
+
+i, suma = 0,0
+# Verifica la precondicion:
+assert(N > 0 and 0<=i<=N)
+while(i <= N):
+	if (i % 2 == 0):
+		suma = suma + 1
+	i = i+1
+assert(N > 0 and i > N)
+
+
+
+do -> while -> iterar sobre una condicion.
+   -> for -> iteras sobre una estructura. Sabes exactamente los elementos por los cuales vas a iterar.
+
+
+
+
+
+
+
+
